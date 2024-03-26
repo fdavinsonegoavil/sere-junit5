@@ -91,6 +91,7 @@
                         <include>**/*Test.java</include>
                         <include>**/Test*.java</include>
                         <include>**/*TestSuite.java</include>
+                        <include>**/*RunnerSuite.java</include>
                         <include>**/When*.java</include>
                     </includes>
                     <systemPropertyVariables>
