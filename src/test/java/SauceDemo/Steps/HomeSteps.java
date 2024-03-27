@@ -19,7 +19,25 @@ public class HomeSteps extends LoginSteps {
     public void irAlCarritoCompra(){
         homeStps.seleccionarCarritoCompras();
     }
-
-
+    @Step("Selecciona en el boton de checkout")
+    public void botonCheckout(){
+        homeStps.seleccionarBtnCheckout();
+    }
+    @Step("Completa los datos de nombre, apellido y codigo postal")
+    public void inputsCheckout(String strFirstName, String strLastName, String strPostalCode){
+        homeStps.completarCheckoutInformación(strFirstName,strLastName,strPostalCode);
+    }
+    @Step("Selecciona en continuar")
+    public void botonContinuar(){
+        homeStps.seleccionarEnContinuar();
+    }
+    @Step("Selecciona en finish")
+    public void botonFinish(){
+        homeStps.seleccionarEnFinish();
+    }
+    @Step("Verifica la compra")
+    public void mensajeConfirmacionCompra(){
+        homeStps.confirmarciónDeLaCompra();
+    }
 
 }

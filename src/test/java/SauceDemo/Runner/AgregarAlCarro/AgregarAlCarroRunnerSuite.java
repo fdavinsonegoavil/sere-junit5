@@ -28,5 +28,20 @@ public class AgregarAlCarroRunnerSuite {
         homeSteps.irAlCarritoCompra();
     }
 
+    @ParameterizedTest
+    @Title("Completa el flujo de compra")
+    @CsvFileSource(resources = "/dataDriven/completarLaCompra.csv", numLinesToSkip = 1)
+    public void completarElFlujoDeCompra(String strUserName,String strPassword,String strFirstName, String strLastName, String strPostalCode){
+        homeSteps.ingresarCredenciales(strUserName,strPassword);
+        homeSteps.agregarMochila();
+        homeSteps.agregarSweater();
+        homeSteps.irAlCarritoCompra();
+        homeSteps.botonCheckout();
+        homeSteps.inputsCheckout(strFirstName,strLastName,strPostalCode);
+        homeSteps.botonContinuar();
+        homeSteps.botonFinish();
+        homeSteps.mensajeConfirmacionCompra();
+    }
+
 
 }

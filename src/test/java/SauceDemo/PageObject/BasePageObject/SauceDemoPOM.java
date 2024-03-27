@@ -1,5 +1,6 @@
 package SauceDemo.PageObject.BasePageObject;
 
+import com.ibm.icu.impl.Assert;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.junit.jupiter.api.Assertions;
@@ -29,6 +30,12 @@ public class SauceDemoPOM extends PageObject {
         }
         moveToWEF(elem);
     }
+    public void esperarElementoVisibleWEF(WebElementFacade elem){
+        if(!elem.isCurrentlyVisible()){
+            Assertions.fail("No se encontro el Locator");
+        }
+        moveToWEF(elem);
+    }
     public void esperarElementoWEFClickeable(WebElementFacade elem){
         if(!elem.isClickable()){
             Assertions.fail("No se encontro el Locator");
@@ -50,6 +57,12 @@ public class SauceDemoPOM extends PageObject {
         Actions action = new Actions(getDriver());
         action.moveToElement(webElem).perform();
         return webElem;
+    }
+    public void verificarAssertDelLocator(WebElementFacade elem, String strLabel){
+        esperarElementoVisibleWEF(elem);
+        if(!elem.getText().contains(strLabel)){
+            Assert.fail("El mensaje no es el correcto");
+        }
     }
 
 }

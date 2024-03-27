@@ -14,4 +14,5 @@ public class LoginSteps extends ScenarioSteps {
         pagLogin.open();
         pagLogin.iniciarSesión(strUserName,strPassword);
     }
+
 }
