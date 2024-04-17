@@ -12,14 +12,10 @@ Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-starte
 
 The template project comes with both Maven and Gradle build scripts. To run the tests with Maven, open a command window and run:
 
-  ./mvnw clean verify
+  mvn clean verify
 
-## Use Gradle
-
-For GRADLE, pen a command window and run:
-
-  ./gradlew test 
 
 ## Viewing the reports
 
-Both of the commands provided above will produce a Serenity test report in the `target/site/serenity` directory. Go take a look!
+Both of the commands provided above will produce a Serenity test report in the `target/site/serenity/index.html`  or `target/site/serenity/serenity-summary.html`directory. Go take a look!
+
