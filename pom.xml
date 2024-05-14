@@ -104,9 +104,13 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
+                    <parallel>methods</parallel> <!-- Ejecución en paralelo a nivel de métodos -->
+                    <threadCount>4</threadCount> <!-- Número de hilos para ejecución paralela -->
+                    <reuseForks>false</reuseForks>
                     <includes>
                         <include>**/*Test.java</include>
                         <include>**/Test*.java</include>
