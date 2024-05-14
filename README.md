@@ -14,7 +14,13 @@ The template project comes with both Maven and Gradle build scripts. To run the 
 
   mvn clean verify
 
+## Running tests on multiple browsers 
+  mvn clean verify -Dwebdriver.driver=Firefox
+    BrowserName= [Chrome,Firefox,Edge]
 
+## Running the same test case in multiple environments
+  mvn clean verify -Denvironment=default
+    Environment= [default,staging,preprod,prod]
 ## Viewing the reports
 
 Both of the commands provided above will produce a Serenity test report in the `target/site/serenity/index.html`  or `target/site/serenity/serenity-summary.html`directory. Go take a look!
