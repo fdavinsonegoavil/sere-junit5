@@ -64,5 +64,10 @@ public class SauceDemoPOM extends PageObject {
             Assert.fail("El mensaje no es el correcto");
         }
     }
+    public void assertionLabelWEF(WebElementFacade elem, String txtCompare){
 
+    }
+    public void assertionLabelWElement(WebElement elem, String txtCompare){
+
+    }
 }
