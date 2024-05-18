@@ -25,8 +25,9 @@ public class MeliServiceTest {
         SerenityRest.then().assertThat().body("departments[0].name", is("Tecnología"));
 
         // Opcionalmente, puedes extraer la respuesta para realizar más validaciones
-        //String responseBody = SerenityRest.lastResponse().getBody().asString();
-        //assertThat(responseBody).isNotNull();
+        String responseBody = SerenityRest.lastResponse().getBody().asString();
+        assertThat(responseBody).isNotNull();
+        System.out.println(responseBody);
 
         // Realizar más validaciones según sea necesario
     }
