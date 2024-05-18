@@ -4,7 +4,7 @@ import SauceDemo.PageObject.Home.HomePageObject;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
 
-public class HomeSteps extends LoginSteps {
+public class HomeSteps {
     HomePageObject homeStps;
 
     @Step("Selecciona en agregar al carrito de compra a la mochila ")

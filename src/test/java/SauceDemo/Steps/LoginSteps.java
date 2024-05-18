@@ -5,13 +5,16 @@ import SauceDemo.PageObject.Login.LoginPageObject;
 import net.serenitybdd.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
-public class LoginSteps extends ScenarioSteps {
+public class LoginSteps{
     String actor;
     LoginPageObject pagLogin;
-
-    @Step(" inicia sesión en la pagina de sauceDemo con el usuario: {0} y contraseña {1}. ")
-    public void ingresarCredenciales(String strUserName, String strPassword){
+    @Step("Abrir el navegador")
+    public void abrirNavegador(){
         pagLogin.open();
+    }
+
+    @Step("Iniciar sesión con las credenciales ")
+    public void ingresarCredenciales(String strUserName, String strPassword){
         pagLogin.iniciarSesión(strUserName,strPassword);
     }
 

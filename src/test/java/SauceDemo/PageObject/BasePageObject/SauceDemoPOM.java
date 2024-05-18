@@ -1,6 +1,8 @@
 package SauceDemo.PageObject.BasePageObject;
 
+import au.com.bytecode.opencsv.CSVReader;
 import com.ibm.icu.impl.Assert;
+import com.opencsv.exceptions.CsvException;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.junit.jupiter.api.Assertions;
@@ -11,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.*;
 import java.time.Duration;
 
 public class SauceDemoPOM extends PageObject {
@@ -70,4 +73,5 @@ public class SauceDemoPOM extends PageObject {
     public void assertionLabelWElement(WebElement elem, String txtCompare){
 
     }
+
 }

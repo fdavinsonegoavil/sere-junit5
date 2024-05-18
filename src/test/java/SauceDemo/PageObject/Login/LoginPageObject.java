@@ -16,7 +16,7 @@ public class LoginPageObject extends SauceDemoPOM {
     public WebElementFacade btnLogin;
 
     public void iniciarSesión(String strUserName, String strPassword) {
-
+        System.out.println("Usuario: " +  strUserName + " ,Password: " + strPassword);
         escribir(txtUserName, strUserName);
         escribir(txtPassword, strPassword);
         seleccionarEnElBoton(btnLogin);
