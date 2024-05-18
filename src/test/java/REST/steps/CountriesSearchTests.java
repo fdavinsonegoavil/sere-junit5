@@ -2,7 +2,6 @@ package REST.steps;
 
 
 import REST.tests.CountriesSearchSteps;
-import com.jayway.restassured.RestAssured;
 import net.serenitybdd.annotations.Steps;
 import org.junit.jupiter.api.Test;
 

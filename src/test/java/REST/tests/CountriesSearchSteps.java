@@ -1,6 +1,6 @@
 package REST.tests;
 
-import com.jayway.restassured.response.Response;
+import io.restassured.response.Response;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.rest.SerenityRest;
 

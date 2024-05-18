@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.core.Is.is;
 
 public class MeliServiceTest {
-    //@Test
+    @Test
     public void testObtenerDepartamentos() {
         // Realizar la solicitud
         SerenityRest.when().get("https://www.mercadolibre.com.ar/menu/departments");
