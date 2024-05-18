@@ -92,11 +92,6 @@
             <artifactId>opencsv</artifactId>
             <version>5.5.1</version>
         </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-rest-assured</artifactId>
-            <version>1.2.3-rc.5</version>
-        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -147,7 +142,7 @@
                     <compilerArgs>
                         <arg>-parameters</arg>
                     </compilerArgs>
-                 </configuration>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
